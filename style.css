@@ -407,6 +407,11 @@ nav .fa-solid{
     margin: 0;
   }
 
+  nav ul li{
+    display: inline-block;
+    margin: 10px;
+  }
+
   .home-col-1 img{
     height: 250px;
     max-width: 100%;
@@ -505,9 +510,9 @@ nav .fa-solid{
     
     #my-books div {
       text-align: center;
-      margin: 8px 0px 0px 4px;
+      margin: 8px 0px 0px 2px;
       display: inline-block;
-      width: 60px;
+      width: 50px;
       vertical-align: top; 
     
     }
@@ -515,7 +520,7 @@ nav .fa-solid{
 
     #projects{
       padding-top: 35px;
-      margin-bottom: 800px;
+      margin-bottom: 900px;
     }
 
   } 
