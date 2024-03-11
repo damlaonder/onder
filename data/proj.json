@@ -22,7 +22,7 @@
     "Description": "This was a project for my Software Engineering class with 3 class peers. We created an application in which users can register/log in and write notes. The date is saved so users can access them again to reflect on past thoughts. Users can also edit and delete past thoughts. All data is stored and connected through a MongoDB database.",
     "Tools": "Python, HTML/CSS, Flask, MongoDB",
     "Learned": "Web Development, how to manipulate data from browser, collaboration",
-    "Github": "Class Proj - Not Available Yet"
+    "Github": "https://github.com/damlaonder/seven/tree/main"
   },
 
   {

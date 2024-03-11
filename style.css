@@ -463,5 +463,59 @@ nav .fa-solid{
       padding-top: 0;
       text-align: center;
     }
+    /* ------------about------------ */
+    .about-p{
+      font-size: 14px;
+      text-align: justify;
+    }
 
-  }  /* ------------home------------ */
+    #about{
+      padding-top: 30px;
+    }
+
+    .career-text h4{
+      font-size: 18px;
+    }
+    .career-text{
+      margin-bottom: 8px;
+    }
+
+    .favbooks h4{
+      font-size: 18px;
+    }
+
+    #my-books img{
+      width: 40px;
+      height: 65px;
+    }
+
+    #my-books div {
+      text-align: center;
+      margin: 4px 0px 0px 2px;
+      display: inline-block;
+      width: 100px;
+      vertical-align: top; 
+    }
+    #my-books h2{
+      font-size: 8px;
+    }
+    #my-books p{
+      font-size: 8px;
+    }
+    
+    #my-books div {
+      text-align: center;
+      margin: 8px 0px 0px 4px;
+      display: inline-block;
+      width: 60px;
+      vertical-align: top; 
+    
+    }
+
+
+    #projects{
+      padding-top: 35px;
+      margin-bottom: 800px;
+    }
+
+  } 
