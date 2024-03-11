@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device.width, initial-scale=1.0">
+    <title>Damla Onder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d4202ddb56.js" crossorigin="anonymous"></script>
+ 
+  </head>
+
+  <body>
+    <div class="background">
+    <!-- ------------about------------ -->
+    <nav>
+      <ul id="sidemenu">
+        <li><a href="#home">home</a> </li>
+        <li><a href="#about">about</a> </li>
+        <li><a href="#projects">projects</a> </li>
+        <li><a href="#contact">contact </a> </li>
+        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div id="home">
+      <div class="container">
+        <div class="row">
+          <div class="home-col-1">
+            <img src="images/headshot.png"> 
+          </div> 
+          <div class="home-col-2">
+            <h1 class="sub-title">damla önder</h1>
+            <h3 class="sub-title2"> software engineer</h3>
+            <p class="aboutmeinfo"> pursuing a career in the intersection of software development, children's literature, and education with hopes to make books 
+              more accessible. 
+              <div class="quick-info">
+                <p class="tabs"><span class="tab-section">education:</span> new york university, <span style="font-style: italic;">computer science</span></p>
+                <p class="tabs"><span class="tab-section">employment:</span> programming intern (Start Lighthouse); instructor (CodeAdvantage)
+                </p>
+                <div class="social-icons">
+                  <a href="https://www.linkedin.com/in/damlaonder"><i class="fa-brands fa-linkedin"></i></a>
+                  <a href="https://github.com/damlaonder"><i class="fa-brands fa-github"></i></a>
+                  <a href="https://www.goodreads.com/user/show/143808771-damla"><i class="fa-brands fa-goodreads"></i></a>
+                </div>
+              </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div id="about">
+      <div class="container">
+        <div class="career-text">
+          <h4> about __________________________________________________________________</h4>
+          <p class="about-p">I’m a Turkish-American woman finishing my Bachelor’s in Computer Science at New York University. I grew up moving 
+            around different schools in West Virginia and Tennessee, developing a love for reading in communities with low accessibility to 
+            educational resources, leading me to want to help foster a love of learning and reading for future generations. I plan on doing that by using 
+            software development to make books and education more accessible. 
+            <br>
+            <br>
+            In school, I have learned how to develop and implement strong software programs with databases to efficiently share information. Outside of school, 
+            I have been interning at Start Lighthouse, a non-profit determined to closing the literacy gap, and working as an Instructor with CodeAdvantage, a company 
+            determined to create learning environments filled with both creative exploration and logical thinking. 
+            <br>
+            <br>
+            <a href="#contact" style="text-decoration: underline;">Contact me to learn more :)</a>
+            </p>
+        </div>
+        <div class="favbooks">
+          <h4> favorite books ___________________________________________________________</h4>
+          <div id="my-books">
+            </div>
+          <script>
+            // refernce to container div
+            const myBooksContainer = document.getElementById('my-books');
+    
+            // fetch JSON data
+            fetch('data/books.json')
+                .then(response => response.json())
+                .then(booksData => {
+                    // for loop - go through each book object in json
+                    booksData.forEach(book => {
+                        // create a div element for each book
+                        const bookDiv = document.createElement('div');
+                        bookDiv.classList.add('book');
+    
+                        // create an h2 element for the title
+                        const titleElement = document.createElement('h2');
+                        titleElement.textContent = book.Title;
+    
+                        // create a p element for the author
+                        const authorElement = document.createElement('p');
+                        authorElement.textContent = book.Author;
+    
+                        // create an img element for the cover
+                        const coverElement = document.createElement('img');
+                        coverElement.src = 'images/covers/' + book.cover;
+                        coverElement.alt = 'images/covers' + book.cover; 
+    
+                        // append elements to the book div
+                        bookDiv.appendChild(coverElement);
+                        bookDiv.appendChild(titleElement);
+                        bookDiv.appendChild(authorElement);
+                        
+    
+                        // append the book div to the container
+                        myBooksContainer.appendChild(bookDiv);
+                    });
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+        </script>
+                        
+          </div>
+          <p>click <a class="bookshelves-link" href="https://www.goodreads.com/review/list/143808771?view=covers" target="_blank" style="text-decoration: underline;" >here</a> to see all of my bookshelves</p>
+        </div>
+       
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- -------------projects------------- -->
+    <div id="projects">
+      <div class="projects">
+        <div class="container">
+          <h1 class="sub-title">projects</h1>
+          <div id="myProjectsContainer"></div>
+          <script>
+            const myProjectsContainer = document.getElementById('myProjectsContainer');
+    
+            fetch('data/proj.json')
+              .then(response => response.json())
+              .then(projects => {
+                projects.forEach(project => {
+                  const flipCard = document.createElement('div');
+                  flipCard.classList.add('flip-card');
+    
+                  const flipCardInner = document.createElement('div');
+                  flipCardInner.classList.add('flip-card-inner');
+    
+                  const flipCardFront = document.createElement('div');
+                  flipCardFront.classList.add('flip-card-front');
+                  const frontImage = document.createElement('img');
+                  frontImage.src = '/images/projects/' + project.Image;
+                  frontImage.alt = project.Title;
+                  const frontTitle = document.createElement('h2');
+                  frontTitle.textContent = project.Title;
+    
+                  flipCardFront.appendChild(frontImage);
+                  flipCardFront.appendChild(frontTitle);
+    
+                  const flipCardBack = document.createElement('div');
+                  flipCardBack.classList.add('flip-card-back');
+                  const backDescription = document.createElement('p');
+                  backDescription.textContent = project.Description;
+                  const backLearned = document.createElement('p');
+                  backLearned.textContent = `Learned: ${project.Learned}`;
+                  const backTools = document.createElement('p');
+                  backTools.textContent = `Tools: ${project.Tools}`;
+                  const backGithub = document.createElement('a');
+                  backGithub.href = project.Github;
+                  backGithub.textContent = 'GitHub Repository';
+    
+                  flipCardBack.appendChild(backDescription);
+                  flipCardBack.appendChild(backLearned);
+                  flipCardBack.appendChild(backTools);
+                  flipCardBack.appendChild(backGithub);
+    
+                  flipCardInner.appendChild(flipCardFront);
+                  flipCardInner.appendChild(flipCardBack);
+    
+                  flipCard.appendChild(flipCardInner);
+    
+                  myProjectsContainer.appendChild(flipCard);
+                });
+              })
+              .catch(error => console.error('Error fetching JSON:', error));
+          </script>
+          <p>click <a class="bookshelves-link" href="https://github.com/damlaonder" target="_blank" style="text-decoration: underline;" >here</a> to see all of my projects</p>
+        </div>
+        
+      </div>
+    </div>
+    
+        
+
+
+  
+    
+  
+    <div id="contact">
+      <div class="contact">
+        <div class="container">
+          <div class="row">
+            <div class="contact-left">
+              <h1 class="sub-title">contact me</h1>
+              <p><i class="fa-regular fa-paper-plane"></i></i> damlaonder@nyu.edu</p>
+              <div class="social-icons">
+                <a href="https://www.linkedin.com/in/damlaonder"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/damlaonder"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.goodreads.com/user/show/143808771-damla"><i class="fa-brands fa-goodreads"></i></a>
+              </div>
+              <a href="images/OnderDamla_Resume.pdf" download class="btn">Download Resume</a>
+            </div>
+            <div class="contact-right">
+              <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="text" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" row="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn">Submit</button>
+              </form>
+              <span id="msg"></span> 
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>made by damla with <i class="fa-regular fa-heart"></i></p>
+        </div>
+      </div>
+    </div>
+
+    
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxmBnDIM4UKU0cvjPXaYNDX-1wvzTAqtPp0vbaBWLV0tHoLPhEwhE8_Pvcv7mtkmNz-/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message sent successfully - Thank you!"
+            setTimeout(function(){msg.innerHTML = ""},5000)
+            form.reset()
+
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+     <script>
+      var sidemenu = document.getElementById("sidemenu");
+      function openmenu(){
+        sidemenu.style.right = "0";
+      }
+
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+      }
+    </script>
+
+
+  </body>
+</html>
