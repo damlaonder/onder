@@ -5,7 +5,7 @@
     "Description": "Damlalingo is a web application with the goal to encourage effective and personal language learning. Users can register with 2 languages they are learning and it will then bring them to their own online language journal where they can practice thinking and writing in those respective languages.",
     "Tools": "Node.js, Express, MongoDB, Handlebars",
     "Learned": "Web Dev, UI/UX, Javascript, Express Apps, Fullstack Dev",
-    "Github": "https://github.com/damlaonder/worldofbooks"
+    "Github": "https://github.com/damlaonder/damlalingo/tree/main"
   },
 
   {
