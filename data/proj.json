@@ -2,7 +2,7 @@
   {
     "Image": "damlalingo.png",
     "Title": "DAMLALINGO",
-    "Description": "Damlalingo is a web application with the goal to encourage effective and personal language learning. Users can register with 2 languages they are learning and it will then bring them to their own online language journal where they can practice thinking and writing in those respective languages. I'm currently working on building this for people to use to enhance their learning!",
+    "Description": "Damlalingo is a web application with the goal to encourage effective and personal language learning. Users can register with 2 languages they are learning and it will then bring them to their own online language journal where they can practice thinking and writing in those respective languages.",
     "Tools": "Node.js, Express, MongoDB, Handlebars",
     "Learned": "Web Dev, UI/UX, Javascript, Express Apps, Fullstack Dev",
     "Github": "https://github.com/damlaonder/worldofbooks"
