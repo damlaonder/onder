@@ -27,17 +27,14 @@
       <div class="container">
         <div class="row">
           <div class="home-col-1">
-            <img src="images/headshot.png"> 
+            <img src="images/headshot.jpg"> 
           </div> 
           <div class="home-col-2">
             <h1 class="sub-title">damla önder</h1>
             <h3 class="sub-title2"> software engineer</h3>
-            <p class="aboutmeinfo"> pursuing a career in the intersection of software development, children's literature, and education with hopes to make books 
-              more accessible. 
+            <p class="aboutmeinfo"> pursuing a career in the intersection of software development, children's literature, and education. passionate about fostering a love for learning. 
               <div class="quick-info">
-                <p class="tabs"><span class="tab-section">education:</span> new york university, <span style="font-style: italic;">computer science</span></p>
-                <p class="tabs"><span class="tab-section">employment:</span> programming intern (Start Lighthouse); instructor (CodeAdvantage)
-                </p>
+                <p class="tabs"><span class="tab-section">bachelor of arts in computer science,</span> new york university</p>
                 <div class="social-icons">
                   <a href="https://www.linkedin.com/in/damlaonder"><i class="fa-brands fa-linkedin"></i></a>
                   <a href="https://github.com/damlaonder"><i class="fa-brands fa-github"></i></a>
@@ -52,67 +49,77 @@
 
     <div id="about">
       <div class="container">
-        <div class="career-text">
-          <h4> about </h4>
-          <p class="about-p">I’m a Turkish-American woman finishing my Bachelor’s in Computer Science at New York University. I grew up moving 
-            around different schools in West Virginia and Tennessee, developing a love for reading in communities with low accessibility to 
-            educational resources, leading me to want to help foster a love of learning and reading for future generations. I plan on doing that by using 
-            software development to make books and education more accessible. 
-            <br>
-            <br>
-            In school, I have learned how to develop and implement strong software programs with databases to efficiently share information. Outside of school, 
-            I have been interning at Start Lighthouse, a non-profit determined to closing the literacy gap, and working as an Instructor with CodeAdvantage, a company 
-            determined to create learning environments filled with both creative exploration and logical thinking. 
-            <br>
-            <br>
-            <a href="#contact" style="text-decoration: underline;">Contact me to learn more :)</a>
-            </p>
-        </div>
-        <div class="favbooks">
-          <h4> favorite books (<a class="bookshelves-link" href="https://www.goodreads.com/review/list/143808771?view=covers" target="_blank" style="text-decoration: underline;" >see all</a>)</h4>
-          <div id="my-books">
+        <div class="about-row">
+          <div class="about-col-2">
+            <div class="career-text">
+              <h4> about </h4>
+              <p class="about-p">I’m Damla, a Turkish-American woman with dreams to make education more accessible!
+                <br>
+                <br>
+                I have a Bachelor of Arts in Computer Science from New York University, where I also dedicated two years to studying in the Liberal Arts Core Program. 
+                During my time as a student, I had the opportunity to work in education and nonprofit organizations within New York City schools, which provided me with 
+                valuable insights into the American education system. In the classroom, I focused on honing my skills in developing web applications, gaining hands-on 
+                experience with various programming languages and frameworks to create innovative, education-based projects.
+                <br>
+                <br>
+                Right now, I am working on building an app that is focused on language literacy! The goal is to create a tool that encourages people to practice new languages by writing journal entries. 
+                <a href="#contact" style="text-decoration: underline;">contact me to learn more</a> :)
+                <br>
+                <br>
+                </p>
+             
+                <div class="favbooks">
+                  <h4 class="favbooks-header"> favorite books (<a class="bookshelves-link" href="https://www.goodreads.com/review/list/143808771-damla?shelf=books-i-love&view=covers" target="_blank" style="text-decoration: underline;" >see all</a>)</h4>
+                  <div id="my-books">
+                    </div>
+                  <script>
+                    // refernce to container div
+                    const myBooksContainer = document.getElementById('my-books');
+            
+                    // fetch JSON data
+                    fetch('data/books.json')
+                        .then(response => response.json())
+                        .then(booksData => {
+                            // for loop - go through each book object in json
+                            booksData.forEach(book => {
+                                // create a div element for each book
+                                const bookDiv = document.createElement('div');
+                                bookDiv.classList.add('book');
+            
+                                // create an h2 element for the title
+                                const titleElement = document.createElement('h2');
+                                titleElement.textContent = book.Title;
+            
+                                // create a p element for the author
+                                const authorElement = document.createElement('p');
+                                authorElement.textContent = book.Author;
+            
+                                // create an img element for the cover
+                                const coverElement = document.createElement('img');
+                                coverElement.src = 'images/covers/' + book.cover;
+                                coverElement.alt = 'images/covers' + book.cover; 
+            
+                                // append elements to the book div
+                                bookDiv.appendChild(coverElement);
+                                bookDiv.appendChild(titleElement);
+                                bookDiv.appendChild(authorElement);
+                                
+            
+                                // append the book div to the container
+                                myBooksContainer.appendChild(bookDiv);
+                            });
+                        })
+                        .catch(error => console.error('Error fetching JSON:', error));
+                </script>
+                                
+                  </div> 
             </div>
-          <script>
-            // refernce to container div
-            const myBooksContainer = document.getElementById('my-books');
-    
-            // fetch JSON data
-            fetch('data/books.json')
-                .then(response => response.json())
-                .then(booksData => {
-                    // for loop - go through each book object in json
-                    booksData.forEach(book => {
-                        // create a div element for each book
-                        const bookDiv = document.createElement('div');
-                        bookDiv.classList.add('book');
-    
-                        // create an h2 element for the title
-                        const titleElement = document.createElement('h2');
-                        titleElement.textContent = book.Title;
-    
-                        // create a p element for the author
-                        const authorElement = document.createElement('p');
-                        authorElement.textContent = book.Author;
-    
-                        // create an img element for the cover
-                        const coverElement = document.createElement('img');
-                        coverElement.src = 'images/covers/' + book.cover;
-                        coverElement.alt = 'images/covers' + book.cover; 
-    
-                        // append elements to the book div
-                        bookDiv.appendChild(coverElement);
-                        bookDiv.appendChild(titleElement);
-                        bookDiv.appendChild(authorElement);
-                        
-    
-                        // append the book div to the container
-                        myBooksContainer.appendChild(bookDiv);
-                    });
-                })
-                .catch(error => console.error('Error fetching JSON:', error));
-        </script>
-                        
-          </div>
+          </div> 
+          <div class="about-col-1">
+            <img src="images/about_grad.png"> 
+          </div> 
+      
+        </div>
         </div>
        
         </div>
@@ -126,7 +133,7 @@
     <div id="projects">
       <div class="projects">
         <div class="container">
-          <h1 class="sub-title">projects</h1>
+          <h1 class="sub-title-proj">projects</h1>
           <div id="myProjectsContainer"></div>
           <script>
             const myProjectsContainer = document.getElementById('myProjectsContainer');
@@ -203,7 +210,7 @@
                 <a href="https://github.com/damlaonder"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.goodreads.com/user/show/143808771-damla"><i class="fa-brands fa-goodreads"></i></a>
               </div>
-              <a href="images/OnderDamla_Resume_2024.pdf" download class="btn">Download Resume</a>
+              <a href="images/OnderDamla_resume.pdf" download class="btn">Download Resume</a>
             </div>
             <div class="contact-right">
               <form name="submit-to-google-sheet">

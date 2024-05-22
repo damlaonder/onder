@@ -1,34 +1,34 @@
 [
   {
-    "Image": "worldofbooks.png",
-    "Title": "World of Books",
-    "Description": "This is my first personal project. Using HTML and CSS, I designed mock landing pages filled with the books I have read/want to read/am currently reading. I started working on this project because, after teaching myself HTML and CSS over the summer of 2022, I wanted to strengthen my skills and start creating something. I chose to focus the project on books because, in my career, I want to find ways to use technology and CS skills to close the accessbility gap in books/education. I thought this project could be my start.",
-    "Tools": "HTML, CSS",
-    "Learned": "Basics of frontend development, UI/UX, HTML/CSS",
+    "Image": "damlalingo.png",
+    "Title": "DAMLALINGO",
+    "Description": "Damlalingo is a web application with the goal to encourage effective and personal language learning. Users can register with 2 languages they are learning and it will then bring them to their own online language journal where they can practice thinking and writing in those respective languages. I'm currently working on building this for people to use to enhance their learning!",
+    "Tools": "Node.js, Express, MongoDB, Handlebars",
+    "Learned": "Web Dev, UI/UX, Javascript, Express Apps, Fullstack Dev",
     "Github": "https://github.com/damlaonder/worldofbooks"
   },
 
   {
-    "Image": "essentia.png",
-    "Title": "Essentia",
-    "Description": "Essentia is a collaborative project that I started working on within a competitive Tech Cohort (Tech Treks) at NYU. Our goal is to create a platform in with a user's favorite books and music. We decided to call it Essentia because 'essentia' means essence, substance, being, existing entity, whole. Our favorite books and music are parts of us - they are tools that we use to feel our emotions, to learn about ourselves and the world, and to capture our souls into something we understand... hence essentia.",
-    "Tools": "Python, HTML/CSS, Bootswatch, Flask, Postgres PSQL",
-    "Learned": "Basics of web development, how to connect psql datatable to html, collaboration",
-    "Github": "https://github.com/damlaonder/essentia_books"
+    "Image": "javajunction.png",
+    "Title": "JAVA JUNCTION",
+    "Description": "Java Junction is a web application I built with 3 peers that takes the user's computer GPS location and gives the coffee shops that are within a specified radius. Users can also leave personal comments based on their opinions/experience of coffee shop for future reference.",
+    "Tools": "Docker, Python, Javascript, HTML/CSS",
+    "Learned": "Fullstack Dev, Utilizing computer hardware for data, Docker, Containers",
+    "Github": "https://github.com/software-students-spring2024/5-final-project-spring-2024-berries"
   },
   {
-    "Image": "seven.png",
-    "Title": "Seven",
-    "Description": "This was a project for my Software Engineering class with 3 class peers. We created an application in which users can register/log in and write notes. The date is saved so users can access them again to reflect on past thoughts. Users can also edit and delete past thoughts. All data is stored and connected through a MongoDB database.",
-    "Tools": "Python, HTML/CSS, Flask, MongoDB",
-    "Learned": "Web Development, how to manipulate data from browser, collaboration",
-    "Github": "https://github.com/damlaonder/seven/tree/main"
+    "Image": "ribbet.png",
+    "Title": "RIBBET",
+    "Description": "This is a PyPi project in which I worked with 3 women to create a virtual frog pet that anyone can download. Users can interact with their frog via command line terminal",
+    "Tools": "Python, PyPi",
+    "Learned": "PyPi, CommandLine Applications",
+    "Github": "https://github.com/software-students-spring2024/3-python-package-exercise-berries"
   },
 
   {
     "Image": "yagmur.png",
     "Title": "Yagmur's Website",
-    "Description": "This is a website I designed for my sister, Yagmur. She is a mechanical engineer at Purdue University. When I started to teach myself how to design websites, she asked if I could make her one that would showcase all of her academic projects and accomplishments so she could show recruiters what she is capable of. Together, we talked about what colors she wanted, what features were important to her (e.g. the correct turkish spelling of her name), and how she wanted it organized.",
+    "Description": "This is a website I designed for my sister, Yagmur. She is a mechanical engineer at Purdue University. This was an opportunity to build my web dev skills while also collaborating to understand what a user expected.",
     "Tools": "HTML/CSS, Bootswatch, Javascript",
     "Learned": "Basics of web development, collaboration",
     "Github": "https://github.com/damlaonder/yagmur"

@@ -40,7 +40,7 @@ p{
 }
 #projects{
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background-image: url(images/home.png); 
   background-size: cover;
   background-position: center;
@@ -113,18 +113,18 @@ a:hover::after{
 
 .home-col-1{
   flex-basis: 20%;
+  margin-left: 3%;
 
 }
 
 .home-col-1 img{
   border-radius: 50%;
   height: 500px;
-
 }
 .home-col-2{
   flex-basis: 60%;
   margin-left: 20px;
-  margin-top: 120px;
+  margin-top: 100px;
 }
 
 .sub-title{
@@ -179,7 +179,7 @@ a:hover::after{
 }
 /*-------------about----------*/
 #about{
-  padding-top: 50px;
+  padding-top: 40px;
 }
 
 .career-text, .favbooks{
@@ -194,9 +194,31 @@ a:hover::after{
 }
 
 .about-p{
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 2%;
   font-family: Arial, Helvetica, sans-serif;
+}
+.about-col-1{
+  flex-basis: 20%;
+  margin-left: 3%;
+
+}
+
+.about-col-1 img{
+  border-radius: 10%;
+  height: 500px;
+  margin-top: 30px;
+
+}
+.about-col-2{
+  flex-basis: 60%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.about-row{
+  display:flex;
+  flex-wrap: wrap;
+  margin-top:65px;
 }
 
 /* ------------------- books ---------------------- */
@@ -212,20 +234,20 @@ a:hover::after{
   text-align: center;
   margin: 8px 0px 0px 4px;
   display: inline-block;
-  width: 100px;
+  width: 80px;
   vertical-align: top; 
 
 }
 #my-books img{
-  width: 80px;
-  height: 130px;
+  width: 70px;
+  height: 110px;
 }
 
 #my-books h2{
-  font-size: 12px;
+  font-size: 10px;
 }
 #my-books p{
-  font-size: 11px;
+  font-size: 9px;
 }
 
 .bookshelves-link a{
@@ -234,19 +256,35 @@ a:hover::after{
   margin-top: 2px;
 
 }
-
+.favbooks-header{
+  font-size: 18px;
+}
 
 /* -------- projs ---------*/
 .project-container{
   text-align: center;
   margin: 0% 10% 0% 10%;
+
+  }
+  #myProjectsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px; /* Adjust this value for spacing between cards */
+    color: white;
+  }
+
+  .sub-title-proj{
+    font-size: 40px;
+    color: white;
+    margin-top: 3%;
   }
   
   .flip-card {
     background-color: #6D30AA;
-    width: 275px;
-    height: 250px;
-    margin: 10px;
+    width: 430px;
+    height: 300px;
+    margin: 8px;
     border-radius: 20px;
     display: inline-block;
     border: solid thin;
@@ -254,7 +292,7 @@ a:hover::after{
     transition: height 0.5s;
   }
   .flip-card:hover {
-    height: 390px;  
+    height: 320px;  
   }
   
   .flip-card-inner {
@@ -283,9 +321,9 @@ a:hover::after{
   }
   
   .flip-card img {
-    max-width: 100%;
-    height:180px;
-    border-radius: 20px;;
+    width: 428px;
+    height:250px;
+    border-radius: 18px;
   }
   
   .flip-card-back {
@@ -293,7 +331,7 @@ a:hover::after{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #8349be;
+    background-color: #2b2437;
     border-radius: 20px;;
   }
   
@@ -302,6 +340,7 @@ a:hover::after{
     margin: 10px;
     text-align: center;
     font-size: 14px;
+    margin-top: 6%;
   }
   .flip-card h2 {
     margin: 10px;
@@ -395,11 +434,11 @@ nav .fa-solid{
 }
 
 
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 1155px){
   nav{
     align-items: center;
     justify-content:center; 
-    font-size: 20px;
+    font-size: 26px;
     top: 0;
     left: 0;
     position: fixed;
@@ -413,8 +452,9 @@ nav .fa-solid{
   }
 
   .home-col-1 img{
-    height: 250px;
+    height: 300px;
     max-width: 100%;
+    margin-left: 0px;
   }
 
   .home-col-1 {
@@ -422,8 +462,10 @@ nav .fa-solid{
     justify-content: center;
     display: block;
     width: 100%;
+    margin-left: 0px;
+    
     }
-    .row{
+  .row{
       display: block;
       margin-top: 0;
       text-align: center;
@@ -467,8 +509,23 @@ nav .fa-solid{
     .container{
       padding-top: 0;
       text-align: center;
+      width: 700px;
+      margin-top: 2%;
     }
     /* ------------about------------ */
+    .about-col-1 img{
+      border-radius: 10%;
+      height: 360px;
+      margin-top: 30px;
+    
+    }
+    .about-col-1{
+      flex-basis: 20%;
+      margin-left: 10px;
+    }
+    .about-row{
+      width: 800px;
+    }
     .about-p{
       font-size: 14px;
       text-align: justify;
@@ -524,3 +581,449 @@ nav .fa-solid{
     }
 
   } 
+
+  @media only screen and (max-width: 920px){
+    nav{
+      align-items: center;
+      justify-content:center; 
+      font-size: 26px;
+      top: 0;
+      left: 0;
+      position: fixed;
+      text-align: center;
+      margin: 0;
+    }
+  
+    nav ul li{
+      display: inline-block;
+      margin: 10px;
+    }
+  
+    .home-col-1 img{
+      height: 300px;
+      max-width: 100%;
+      margin-left: 0px;
+    }
+  
+    .home-col-1 {
+      display: flex;
+      justify-content: center;
+      display: block;
+      width: 100%;
+      margin-left: 0px;
+      
+      }
+    .row{
+        display: block;
+        margin-top: 0;
+        text-align: center;
+      }
+    
+      .home-col-2{
+        margin: 5px;
+  
+      }
+  
+      .sub-title{
+        font-size: 24px;
+      }
+  
+      .sub-title2{
+        font-size: 20px;
+      }
+  
+      .aboutmeinfo{
+        font-size: 16px;
+        margin-top: 8px;
+      }
+  
+      .quick-info{
+        margin-top: 15px
+      }
+  
+      .tabs{
+        font-size: 16px;
+        text-align: center;
+        margin: 0;
+      }
+  
+      .social-icons{
+        margin-top: 10px;
+      }
+      .social-icons a{
+        font-size: 30px;
+      }
+    
+      .container{
+        padding-top: 0;
+        text-align: center;
+        width: 700px;
+        margin-top: 2%;
+      }
+      /* ------------about------------ */
+      .about-col-1 img{
+        border-radius: 10%;
+        height: 300px;
+        margin-top: 30px;
+      
+      }
+      .about-col-1{
+        flex-basis: 20%;
+        margin-left: 10px;
+      }
+      .about-row{
+        width: 700px;
+      }
+      .about-p{
+        font-size: 14px;
+        text-align: justify;
+      }
+  
+      #about{
+        padding-top: 30px;
+      }
+  
+      .career-text h4{
+        font-size: 18px;
+      }
+      .career-text{
+        margin-bottom: 8px;
+      }
+  
+      .favbooks h4{
+        font-size: 18px;
+      }
+  
+      #my-books img{
+        width: 40px;
+        height: 65px;
+      }
+  
+      #my-books div {
+        text-align: center;
+        margin: 4px 0px 0px 2px;
+        display: inline-block;
+        width: 100px;
+        vertical-align: top; 
+      }
+      #my-books h2{
+        font-size: 8px;
+      }
+      #my-books p{
+        font-size: 8px;
+      }
+      
+      #my-books div {
+        text-align: center;
+        margin: 8px 0px 0px 2px;
+        display: inline-block;
+        width: 50px;
+        vertical-align: top; 
+      
+      }
+  
+  
+      #projects{
+        padding-top: 35px;
+        margin-bottom: 900px;
+      }
+  
+    } 
+  
+    @media only screen and (max-width: 725px){
+      nav{
+        align-items: center;
+        justify-content:center; 
+        font-size: 20px;
+        top: 0;
+        left: 0;
+        position: fixed;
+        text-align: center;
+        margin: 0;
+      }
+    
+      nav ul li{
+        display: inline-block;
+        margin: 10px;
+      }
+    
+      .home-col-1 img{
+        height: 300px;
+        max-width: 100%;
+        margin-left: 0px;
+      }
+    
+      .home-col-1 {
+        display: flex;
+        justify-content: center;
+        display: block;
+        width: 100%;
+        margin-left: 0px;
+        
+        }
+      .row{
+          display: block;
+          margin-top: 0;
+          text-align: center;
+        }
+      
+        .home-col-2{
+          margin: 5px;
+    
+        }
+    
+        .sub-title{
+          font-size: 24px;
+        }
+    
+        .sub-title2{
+          font-size: 20px;
+        }
+    
+        .aboutmeinfo{
+          font-size: 16px;
+          margin-top: 8px;
+        }
+    
+        .quick-info{
+          margin-top: 15px
+        }
+    
+        .tabs{
+          font-size: 16px;
+          text-align: center;
+          margin: 0;
+        }
+    
+        .social-icons{
+          margin-top: 10px;
+        }
+        .social-icons a{
+          font-size: 30px;
+        }
+      
+        .container{
+          padding-top: 0;
+          text-align: center;
+          width: 480px;
+          margin-top: 2%;
+        }
+        /* ------------about------------ */
+        .about-col-1 img{
+          border-radius: 10%;
+          height: 180px;
+          margin-top: 0;
+          margin-left: 0;
+        }
+        .about-row{
+          display: block;
+          margin-top: 0;
+          text-align: center;
+        }
+        .about-col-1{
+          flex-basis: 20%;
+        }
+        .about-col-2{
+          margin-left: 0;
+        }
+
+        .about-col-2 p{
+          font-size: 14px;;
+        }
+        .about-row{
+          width: 460px;
+        }
+        .favbooks-header{
+          font-size: 16px;
+        }
+        .about-p{
+          font-size: 10px;
+          text-align: justify;
+        }
+    
+        #about{
+          padding-top: 30px;
+        }
+    
+        .career-text h4{
+          font-size: 18px;
+        }
+        .career-text{
+          margin-bottom: 8px;
+        }
+    
+        .favbooks h4{
+          margin-bottom: 0;
+        }
+    
+        #my-books img{
+          width: 40px;
+          height: 65px;
+        }
+    
+        #my-books div {
+          text-align: center;
+          margin: 4px 0px 0px 2px;
+          display: inline-block;
+          width: 100px;
+          vertical-align: top; 
+        }
+        #my-books h2{
+          font-size: 6px;
+        }
+        #my-books p{
+          font-size: 6px;
+        }
+        
+        #my-books div {
+          text-align: center;
+          margin: 8px 0px 0px 2px;
+          display: inline-block;
+          width: 50px;
+          vertical-align: top; 
+        
+        }
+    
+    
+        #projects{
+          padding-top: 35px;
+          margin-bottom: 900px;
+        }
+    
+        .sub-title-proj{
+          font-size: 30px;
+        }
+      } 
+    
+
+
+/* @media only screen and (max-width: 700px){
+  nav{
+    align-items: center;
+    justify-content:center; 
+    font-size: 20px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    text-align: center;
+    margin: 0;
+  }
+
+  nav ul li{
+    display: inline-block;
+    margin: 10px;
+  }
+
+  .home-col-1 img{
+    height: 250px;
+    max-width: 100%;
+  }
+
+  .home-col-1 {
+    display: flex;
+    justify-content: center;
+    display: block;
+    width: 100%;
+    }
+  .row{
+      display: block;
+      margin-top: 0;
+      text-align: center;
+    }
+  
+    .home-col-2{
+      margin: 5px;
+
+    }
+
+    .sub-title{
+      font-size: 24px;
+    }
+
+    .sub-title2{
+      font-size: 20px;
+    }
+
+    .aboutmeinfo{
+      font-size: 16px;
+      margin-top: 8px;
+    }
+
+    .quick-info{
+      margin-top: 15px
+    }
+
+    .tabs{
+      font-size: 16px;
+      text-align: center;
+      margin: 0;
+    }
+
+    .social-icons{
+      margin-top: 10px;
+    }
+    .social-icons a{
+      font-size: 30px;
+    }
+  
+    .container{
+      padding-top: 0;
+      text-align: center;
+    }
+    /* ------------about------------ */
+    /*.about-p{
+      font-size: 14px;
+      text-align: justify;
+    }
+
+    #about{
+      padding-top: 30px;
+    }
+
+    .career-text h4{
+      font-size: 18px;
+    }
+    .career-text{
+      margin-bottom: 8px;
+    }
+
+    .favbooks h4{
+      font-size: 18px;
+    }
+
+    #my-books img{
+      width: 40px;
+      height: 65px;
+    }
+
+    #my-books div {
+      text-align: center;
+      margin: 4px 0px 0px 2px;
+      display: inline-block;
+      width: 100px;
+      vertical-align: top; 
+    }
+    #my-books h2{
+      font-size: 8px;
+    }
+    #my-books p{
+      font-size: 8px;
+    }
+    
+    #my-books div {
+      text-align: center;
+      margin: 8px 0px 0px 2px;
+      display: inline-block;
+      width: 50px;
+      vertical-align: top; 
+    
+    }
+
+
+    #projects{
+      padding-top: 35px;
+      margin-bottom: 900px;
+    }
+
+  } 
+ */
